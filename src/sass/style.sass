@@ -18,7 +18,7 @@ nav
 	width: 100%
 	height: 50px
 	background: #212121
-	z-index: 2
+	z-index: 3
 
 .menu
 	display: flex
@@ -199,7 +199,7 @@ nav
 	text-align: center
 	text-transform: uppercase
 	color: #222222
-	z-index: 2
+	z-index: 1
 	&_white
 		color: #FFFFFF
 
@@ -208,6 +208,7 @@ nav
 	justify-content: center
 	align-items: center
 	margin-top: 28px
+	min-height: 100%
 	.reasons_round
 		display: flex
 		width: 116px
@@ -224,12 +225,12 @@ nav
 		font-size: 17px
 		line-height: 21px
 	.reasons_decsr
-		width: 371px
+		width: 360px
 	.reasons_subtitle
 		color: #1EACC7
 		font-style: normal
 		font-weight: 400
-		font-size: 17px
+		font-size: 18px
 		line-height: 21px
 
 .mobile
@@ -280,7 +281,24 @@ nav
 			margin: 0 auto
 			border-radius: 100%
 			cursor: pointer
-
+			&:before
+				content: ''
+				display: block
+				width: 14px
+				height: 2px
+				background-color: $color_blue
+				transition: 0.3s all
+			&:after
+				content: ''
+				position: absolute
+				display: block
+				height: 14px
+				width: 2px
+				background-color: $color_blue
+				transition: 0.3s all
+			&:hover
+				&:before,&:after
+					background-color: $color_red
 .choice
 	position: relative
 	min-height: 502px
@@ -305,3 +323,128 @@ nav
 		width: 100%
 		background-color: #070716
 		z-index: 1
+
+.require
+	padding: 68px 0 87px 0
+	&_block
+		margin: 33px 0
+		&_nmb
+			margin-bottom: 0px
+	&_title
+		font-style: normal
+		font-weight: 400
+		font-size: 22px
+		align-items: center
+		color: #1CA8C3
+	&_list
+		margin-top: 21px
+		list-style-type: none
+		padding-left: 52px
+		li
+			position: relative
+			font-style: normal
+			font-weight: 300
+			font-size: 17px
+			margin-bottom: 10px
+			&::before
+				content: ''
+				display: block
+				position: absolute
+				left: -32px
+				top: 3px
+				width: 21px
+				height: 20px
+				background: url(../ico/check_blue.svg) center (center / cover) no-repeat
+	&_descr
+		color: #1CA8C3
+		font-style: normal
+		font-weight: 300
+		font-size: 17px
+	.warning
+		.require_title
+			color: $color_red
+		.require_list
+			li
+				&:before
+					background: url(../ico/check_red.svg) center (center / cover) no-repeat
+
+.world
+	min-height: 720px
+	background: url(../img/bg/component.jpg) center (center / cover) no-repeat
+	padding: 51px 0 22.5px 0
+	.watch
+		display: block
+		align-items: center
+		text-align: center
+		text-transform: uppercase
+		color: #1FBAD6
+		font-style: normal
+		font-weight: 400
+		font-size: 15px
+		line-height: 68px
+		margin-top: 456.5px
+
+footer
+	padding: 11px 21px 15.5px 23px
+	a
+		&:hover
+			text-decoration: none
+.footer
+	&_divider
+		width: 299px
+		height: 4px
+		background: #1FBAD6
+		margin: 0 auto
+	&_wrapper
+		display: flex
+		justify-content: space-between
+		align-items: flex-start
+		padding-top: 32px
+	&_wrapper > div
+			width: 33%
+			&:nth-child(3)
+				display: flex 
+				justify-content: flex-end
+	&_sohial
+		width: 160px
+		display: flex
+		justify-content: space-between
+		&_item
+			display: flex
+			justify-content: center
+			align-items: center
+			width: 35px
+			height: 35px
+			background: #070716
+			border-radius: 100%
+			margin-top: 48px
+			margin: 0 4px
+	&_links
+		width: 390px
+		margin: 0 auto
+		&_main
+			display: flex
+			justify-content: space-between
+			padding: 0 10px
+			a
+				align-items: center
+				text-transform: uppercase
+				color: #070716
+				font-style: normal
+				font-weight: 300
+				font-size: 15px
+		&_sub
+			display: flex
+			justify-content: space-between
+			margin-top: 10px
+			a
+				text-transform: uppercase
+				color: #999999
+				font-weight: 300
+				font-size: 11px
+
+		&_lang
+			text-transform: uppercase
+			color: #1FBAD6
+			font-weight: 400
+			font-size: 11px
