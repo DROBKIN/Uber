@@ -9,6 +9,9 @@ nav
 	background: #212121
 	z-index: 3
 
+.hamburger
+	display: none
+
 .menu
 	display: flex
 	justify-content: space-between
@@ -21,7 +24,7 @@ nav
 		font-style: normal
 		font-weight: 300
 		font-size: 15px
-
+		text-decoration: none
 	&_item
 		border-right: 2px dotted black
 		padding-right: 45px
@@ -81,7 +84,7 @@ nav
 		background: linear-gradient(0deg, #1EACC7 0%, #4CE2FF 100%)
 		box-shadow: inset 0px -3px 0px rgba(0, 0, 0, 0.12)
 		border-radius: 4px
-		min-height: 46px
+		height: 46px
 		width: 172px
 		font-style: normal
 		font-weight: 400
@@ -363,7 +366,7 @@ nav
 	min-height: 720px
 	background: url(../img/bg/component.jpg) center (center / cover) no-repeat
 	padding: 51px 0 22.5px 0
-	.watch
+	&_link
 		display: block
 		align-items: center
 		text-align: center
@@ -441,4 +444,7 @@ footer
 			text-transform: uppercase
 			margin: 0 auto
 			text-align: center
-	&_mobile
+.xs-visible
+	display: none
+	
+
